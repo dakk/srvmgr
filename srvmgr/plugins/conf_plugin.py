@@ -19,7 +19,7 @@ conf-plugin
         self.args = args
 
     def list_servers(self):
-        for x in self.conf.get_servers('*'):
+        for x in self.conf.get_servers('ALL'):
             print ("  %s %s" % (x['name'], x['host']))
 
     def list_services(self):
