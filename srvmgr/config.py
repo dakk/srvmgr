@@ -3,7 +3,6 @@ import os
 import sys
 
 DEFAULT_PATH = os.path.expanduser("~/.srvmgr.json")
-print (DEFAULT_PATH)
 
 class Config:
 	def __init__ (self):

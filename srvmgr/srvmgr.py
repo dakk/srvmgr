@@ -1,6 +1,6 @@
 import sys
 from . import Config
-from .plugins import PluginRepository, SSHPlugin, ConfPlugin, StatusPlugin
+from .plugins import PluginRepository, SSHPlugin, ConfPlugin, StatusPlugin, SSHAliasPlugin
 
 # srvmgr status * --realtime
 # srvmgr ssh hb.blog
@@ -14,6 +14,7 @@ def main():
 	pr.register(SSHPlugin)
 	pr.register(ConfPlugin)
 	pr.register(StatusPlugin)
+	pr.register(SSHAliasPlugin)
 
 	pr.handle(sys.argv[1::])
 

@@ -28,8 +28,9 @@ with the remote port to tunnel to the given local port.
 ```
 
 
-## Usage
+## Plugins
 
+### SSH Plugin
 ```
 ssh-plugin
   connect to ssh servers
@@ -43,17 +44,20 @@ ssh-plugin
     -p port, --port=port            use a different ssh port (default is 22)
     -s service, --service=service   bind a remote service to localhost port
     -e cmd, --exec=cmd              exec a command in the remote server
-	
+```
 
+### Conf Plugin
+```
 conf-plugin
   handle srvmgr configuration
 
   usage:
     svrmgr conf server list         list all servers
     srvmgr conf services list       list all services
-  
-    
+```
 
+### Status Plugin
+```
 status-plugin
   inspect the status of your servers
 
@@ -72,6 +76,18 @@ status-plugin
 
   example:
 	srvmgr status ALL disk,mem           show the disk and memory usage for all servers
+```
+
+### SSH Alias Plugin
+```
+ssh_alias-plugin
+  create shell aliases for shell
+
+  usage:
+	srvmgr ssh_alias srv            create shell alias for the given server or ALL
+
+  bashrc:
+	insert the output `srvmgr ssh_alias srv` on .bashrc
 ```
 
 
